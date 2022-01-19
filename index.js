@@ -3,7 +3,9 @@ const express = require('express'); //importando funcionalidades do módulo expr
 const app = express();
 
 app.get('/', (request, response) => {
-    return response.send('Hello World'); //node não observa alterações nem atualiza o servidor automaticamente
+    return response.json({
+        evento: 'Semana Omnistack 11.0',
+        aluno: 'Thamiris Balbi'
+    });
 });
-
 app.listen(3333); //cannot get: ainda não criou uma rota para aplicaçao
