@@ -2,4 +2,8 @@ const express = require('express'); //importando funcionalidades do módulo expr
 // agora a variável express contém todas as funcionalidades disponíveis para o projeto
 const app = express();
 
-app.listen(3333);
+app.get('/', (request, response) => {
+    return response.send('Hello World'); //node não observa alterações nem atualiza o servidor automaticamente
+});
+
+app.listen(3333); //cannot get: ainda não criou uma rota para aplicaçao
