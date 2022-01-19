@@ -12,7 +12,7 @@ Rota: conjunto completo do link localhost / Recursos: o que vem depois da /. cam
  POST: Criar uma informação no back-end
 **/
 
-app.get('/users', (request, response) => {
+app.post('/users', (request, response) => {
     return response.json({
         evento: 'Semana Omnistack 11.0',
         aluno: 'Thamiris Balbi'
