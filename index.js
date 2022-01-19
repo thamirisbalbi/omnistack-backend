@@ -6,7 +6,13 @@ const app = express();
 Rota: conjunto completo do link localhost / Recursos: o que vem depois da /. caminho para a rota.
 **/
 
-app.get('/', (request, response) => {
+/**
+ Métodos HTTP
+ GET: buscar (retornar) uma informação do backend
+ POST: Criar uma informação no back-end
+**/
+
+app.get('/users', (request, response) => {
     return response.json({
         evento: 'Semana Omnistack 11.0',
         aluno: 'Thamiris Balbi'
