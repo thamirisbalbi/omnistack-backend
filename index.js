@@ -8,11 +8,13 @@ Rota: conjunto completo do link localhost / Recursos: o que vem depois da /. cam
 
 /**
  Métodos HTTP
- GET: buscar (retornar) uma informação do backend
+ GET: buscar (retornar) uma informação do backend: utilizado quando acesso a rota no computador
  POST: Criar uma informação no back-end
+ PUT: Alterar uma informação no back-end
+ DELETE: Deletar uma informação no back-end
 **/
 
-app.post('/users', (request, response) => {
+app.get('/users', (request, response) => {
     return response.json({
         evento: 'Semana Omnistack 11.0',
         aluno: 'Thamiris Balbi'
