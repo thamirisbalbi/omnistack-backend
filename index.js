@@ -26,5 +26,5 @@ app.post('/users', (request, response) => {
         evento: 'Semana Omnistack 11.0',
         aluno: 'Thamiris Balbi'
     });
-});
+})
 app.listen(3333); //cannot get: ainda não criou uma rota para aplicaçao
