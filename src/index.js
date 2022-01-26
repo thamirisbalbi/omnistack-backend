@@ -6,6 +6,7 @@ const routes = require('./routes');
 const app = express();
 
 app.use(express.json()); //transforma o arquivo json do parâmetro em algo entendível pela aplicação
+app.use(routes);
 
 /**
 Rota: conjunto completo do link localhost / Recursos: o que vem depois da /. caminho para a rota.
