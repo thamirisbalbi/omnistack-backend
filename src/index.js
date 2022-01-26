@@ -1,5 +1,8 @@
 const express = require('express'); //importando funcionalidades do módulo express para dentro da variável express
 // agora a variável express contém todas as funcionalidades disponíveis para o projeto
+
+const routes = require('./routes');
+
 const app = express();
 
 app.use(express.json()); //transforma o arquivo json do parâmetro em algo entendível pela aplicação
