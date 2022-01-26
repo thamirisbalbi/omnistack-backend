@@ -12,6 +12,7 @@ Rota: conjunto completo do link localhost / Recursos: o que vem depois da /. cam
  POST: Criar uma informação no back-end
  PUT: Alterar uma informação no back-end
  DELETE: Deletar uma informação no back-end
+ o navegador utiliza para navegar a página somente o método GET
 **/
 
 app.get('/users', (request, response) => {
