@@ -15,8 +15,8 @@ Rota: conjunto completo do link localhost / Recursos: o que vem depois da /. cam
  o navegador utiliza para navegar a página somente o método GET
 **/
 
-app.get('/users', (request, response) => {
-    const params = request.query;
+app.get('/users/:id', (request, response) => {
+    const params = request.params;
 
     console.log(params);
 
