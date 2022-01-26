@@ -24,7 +24,7 @@ app.post('/users', (request, response) => {
 
     return response.json({
         evento: 'Semana Omnistack 11.0',
-        aluno: 'Thamiris Balbi'
+        aluno: 'Cleiton Souza'
     });
 })
 app.listen(3333); //cannot get: ainda não criou uma rota para aplicaçao
