@@ -2,6 +2,8 @@ const express = require('express'); //importando funcionalidades do módulo expr
 // agora a variável express contém todas as funcionalidades disponíveis para o projeto
 const app = express();
 
+app.use(express.json()); //transforma o arquivo json do parâmetro em algo entendível pela aplicação
+
 /**
 Rota: conjunto completo do link localhost / Recursos: o que vem depois da /. caminho para a rota.
 **/
