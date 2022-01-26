@@ -12,3 +12,5 @@ routes.post('/users', (request, response) => {
         aluno: 'Cleiton Souza'
     });
 }); 
+
+module.exports = routes; 
