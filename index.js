@@ -15,10 +15,10 @@ Rota: conjunto completo do link localhost / Recursos: o que vem depois da /. cam
  o navegador utiliza para navegar a página somente o método GET
 **/
 
-app.get('/users/:id', (request, response) => {
-    const params = request.params;
+app.post('/users', (request, response) => {
+    const body = request.body;
 
-    console.log(params);
+    console.log(body);
 
     return response.json({
         evento: 'Semana Omnistack 11.0',
