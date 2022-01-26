@@ -17,14 +17,5 @@ Rota: conjunto completo do link localhost / Recursos: o que vem depois da /. cam
  o navegador utiliza para navegar a página somente o método GET
 **/
 
-app.post('/users', (request, response) => {
-    const body = request.body;
 
-    console.log(body);
-
-    return response.json({
-        evento: 'Semana Omnistack 11.0',
-        aluno: 'Cleiton Souza'
-    });
-});
 app.listen(3333); //cannot get: ainda não criou uma rota para aplicaçao
