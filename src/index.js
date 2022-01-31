@@ -1,12 +1,12 @@
 const express = require('express'); //importando funcionalidades do módulo express para dentro da variável express
 // agora a variável express contém todas as funcionalidades disponíveis para o projeto
 
-const routes = require('./routes');
+const routes = require('./routes'); //importa as rotas do arquivo routes utilizando require: é preciso usar o ./ para o programa saber que é um arquivo, não um pacote como o express
 
 const app = express();
 
-app.use(express.json()); //transforma o arquivo json do parâmetro em algo entendível pela aplicação
-app.use(routes);
+app.use(express.json()); // vindo antes das rotas, e converte o json em um objeto do JS : transforma o arquivo json do parâmetro em algo entendível pela aplicação
+app.use(routes); //importante esse comando estar abaixo do app use express.json
 
 /**
 Rota: conjunto completo do link localhost / Recursos: o que vem depois da /. caminho para a rota.
