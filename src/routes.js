@@ -3,9 +3,7 @@ const express = require('express'); //importa a aplicação express para o arqui
 const routes = express.Router(); //desacopla as rotas do express em uma nova variável
 
 routes.post('/ongs', (request, response) => { //cria cadastro de ong com método post
-    const data = request.body; //acessar o corpo da requisição
-
-    console.log(data); //garante que os dados estão chegando 
+    const { name, email, whatsapp, city, uf } = request.body; //acessar o corpo da requisição
 
     return response.json();
 }); 
