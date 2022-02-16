@@ -6,7 +6,7 @@ exports.up = function(knex) {
         table.string('description').notNullable();
         table.decimal('value').notNullable(); //valor armazenado em decimais
         
-       table.string('ong_id').notNullTable() //coluna que armazena o id da ong (em string) que criou o incidente(relacionamento)
+       table.string('ong_id').notNullable() //coluna que armazena o id da ong (em string) que criou o incidente(relacionamento)
 
        table.foreign('ong_id').references('id').inTable('ongs'); //cria chave estrangeira referente a id de dentro da tabela ongs
     }); 
