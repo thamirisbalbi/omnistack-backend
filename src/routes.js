@@ -5,6 +5,12 @@ const connection = require('./database/connection');
 
 const routes = express.Router(); //desacopla as rotas do express em uma nova variável
 
+routes.get('/ongs', async (request, response) => {
+
+    
+
+}); //rota do tipo get, pois se quer listar algo
+
 routes.post('/ongs', async (request, response) => { //cria cadastro de ong com método post
     const { name, email, whatsapp, city, uf } = request.body; //acessar o corpo da requisição
 
