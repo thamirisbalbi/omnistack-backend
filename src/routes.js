@@ -7,7 +7,7 @@ const routes = express.Router(); //desacopla as rotas do express em uma nova var
 
 routes.get('/ongs', async (request, response) => {
 
-    
+    const ongs = await connection('ongs').select('*'); // seleciona todos os campos de todos os registros dentro da tabela ongs 
 
 }); //rota do tipo get, pois se quer listar algo
 
