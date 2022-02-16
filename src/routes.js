@@ -6,6 +6,7 @@ const routes = express.Router(); //desacopla as rotas do express em uma nova var
 routes.post('/ongs', (request, response) => { //cria cadastro de ong com método post
     const { name, email, whatsapp, city, uf } = request.body; //acessar o corpo da requisição
 
+    const id = crypto.randomBytes(4).toString('HEX'); //gera 4 bytes de caracteres aleatórios, e os converte para string hexadecimal
 
 
     return response.json();
