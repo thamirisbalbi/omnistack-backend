@@ -2,15 +2,12 @@ const express = require('express'); //importa a aplicação express para o arqui
 
 const routes = express.Router(); //desacopla as rotas do express em uma nova variável
 
-routes.post('/users', (request, response) => {
-    const body = request.body;
+routes.post('/ongs', (request, response) => { //cria cadastro de ong com método post
+    const data = request.body; //acessar o corpo da requisição
 
-    console.log(body);
+    console.log(data); //garante que os dados estão chegando 
 
-    return response.json({
-        evento: 'Semana Omnistack 11.0',
-        aluno: 'Cleiton Souza'
-    });
+    return response.json();
 }); 
 
 module.exports = routes; //deixa as rotas disponíveis para o acesso: exporta a variável routes de dentro do arquivo
