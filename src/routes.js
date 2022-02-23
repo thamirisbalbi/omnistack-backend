@@ -29,6 +29,6 @@ routes.post('/ongs', async (request, response) => { //cria cadastro de ong com m
     }) //connection ('nome da tabela que se quer inserir dados').comando para inserir dados dentro da tabela
     //dentro do insert terá todas as informações da tabela de ongs
     return response.json( { id }); //devolve ao cliente na rota apenas o id da ong, pois com ele a ong se conecta à aplicação
-}); 
+}); //rota de criação da ong
 
 module.exports = routes; //deixa as rotas disponíveis para o acesso: exporta a variável routes de dentro do arquivo
