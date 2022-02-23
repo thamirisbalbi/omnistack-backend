@@ -1,4 +1,5 @@
 //exporta um objeto de dentro com os métodos
+const crypto = require('crypto');
 const connection = require('../database/connection'); //conexão com banco, com dois pontos (..) para voltar dois arquivos e acessar a pasta database
 
 module.exports = {
