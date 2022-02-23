@@ -1,4 +1,6 @@
 //exporta um objeto de dentro com os métodos
+const connection = require('../database/connection'); //conexão com banco, com dois pontos (..) para voltar dois arquivos e acessar a pasta database
+
 module.exports = {
     async create(request, response)
     {
