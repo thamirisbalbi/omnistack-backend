@@ -10,7 +10,7 @@ routes.get('/ongs', async (request, response) => {
     const ongs = await connection('ongs').select('*'); // seleciona todos os campos de todos os registros dentro da tabela ongs 
 
     return response.json(ongs);
-    
+     
 }); //rota do tipo get, pois se quer listar algo
 
 routes.post('/ongs', async (request, response) => { //cria cadastro de ong com método post
