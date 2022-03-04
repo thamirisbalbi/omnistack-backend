@@ -37,6 +37,8 @@ module.exports = {
             return response.status(401).json({ error: 'Operation not permitted.' }); //status não autorizado, enviando uma resposta escrita em formato json
         }
 
+        await connection('incidents').where('id', id).delete(); //deleta o registro de dentro da tabela do banco de dados
+
         
     }
 
