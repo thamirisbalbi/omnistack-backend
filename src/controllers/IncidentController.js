@@ -10,6 +10,7 @@ module.exports = {
         console.log(count);
 
         const incidents = await connection('incidents')
+            .join('ongs', 'ongs_id', '=', 'incidents.ong_id') //compara o ong_id e trazendo os dados das ongs relacionada ao incidente cadastrado
             .limit(5)
             .offset((page - 1) * 5) //esquema simples de paginação
             .select('*');
