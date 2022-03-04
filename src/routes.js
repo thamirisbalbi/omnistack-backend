@@ -6,6 +6,7 @@ const connection = require('./database/connection');
 
 const routes = express.Router(); //desacopla as rotas do express em uma nova variável
 
+routes.post('/ongs', OngController.index);
 routes.post('/ongs', OngController.create); //cria cadastro de ong com método post
  
 //rota de criação da ong
