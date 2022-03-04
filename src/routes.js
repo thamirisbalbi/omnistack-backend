@@ -2,7 +2,7 @@ const express = require('express'); //importa a aplicação express para o arqui
 
 const OngController = require('./controllers/OngController'); //importa dados de ongcontroller dentro da aplicação 
 const IncidentController = require('./controllers/IncidentController'); 
-
+const ProfileController = require('./controllers/ProfileController');
 
 //apaga comando de conexão com banco por ela não ser mais utilizada nas rotas 
 
@@ -10,6 +10,8 @@ const routes = express.Router(); //desacopla as rotas do express em uma nova var
 
 routes.get('/ongs', OngController.index);
 routes.post('/ongs', OngController.create); //cria cadastro de ong com método post
+
+routes.get('/profile', ProfileController.index);
 
 routes.get('/incidents', IncidentController.index); //cria rota que lista incidentes
 routes.post('/incidents', IncidentController.create); // rota que cria os incidentes
