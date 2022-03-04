@@ -2,6 +2,7 @@ const connection = require('../database/connection');
 
 module.exports = {
     async create(request, response) {
-        const { title, description, value } = request.body; 
+        const { title, description, value } = request.body;
+        request.headers;
     }   //cria incidente
-} //exporta objeto
+}; //exporta objeto
