@@ -3,9 +3,12 @@ const connection = require('../database/connection');
 
 module.exports = {
     async index(request, response) {
-        const { page = 1 } = request.query;
+        const { page = 1 } = request.query; //se page ainda não existir, é criado page com valor inicial igual a 1 
 
-        const incidents = await connection('incidents').select('*');
+        const incidents = await connection('incidents')
+        .limit(5)
+        
+        .select('*');
         
         return response.json(incidents);
     },
