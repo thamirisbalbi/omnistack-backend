@@ -3,10 +3,13 @@ const express = require('express'); //importa a aplicação express para o arqui
 const OngController = require('./controllers/OngController'); //importa dados de ongcontroller dentro da aplicação 
 const IncidentController = require('./controllers/IncidentController'); 
 const ProfileController = require('./controllers/ProfileController');
+const SessionController = require('./controllers/SessionController'); //importa SessionController
 
 //apaga comando de conexão com banco por ela não ser mais utilizada nas rotas 
 
 const routes = express.Router(); //desacopla as rotas do express em uma nova variável
+
+routes.post('/sessions', SessionController.create); //cria rota para login
 
 routes.get('/ongs', OngController.index);
 routes.post('/ongs', OngController.create); //cria cadastro de ong com método post
