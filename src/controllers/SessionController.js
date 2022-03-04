@@ -9,7 +9,10 @@ module.exports = {
             .select('name')
             .first(); //assim retorna apenas um resultado em vez de um array
 
-    
+        if(!ong) {
+            return response.status(400).json({ error: 'No ONG found with this ID' });  
+        }
 
+        
     }
 }
