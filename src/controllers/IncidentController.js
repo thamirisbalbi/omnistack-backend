@@ -9,7 +9,7 @@ module.exports = {
     },
      
 
-    async create(request, response) {
+    async create(request, response) { 
         const { title, description, value } = request.body;
         const ong_id = request.headers.authorization;
 
@@ -18,10 +18,11 @@ module.exports = {
             description,
             value,
             ong_id,
+            
         }); //cria incidente
 
-        return response.json({ id });
-
+        return response.json({ id })
+    
     },
     
     async delete(request, respose) {
@@ -31,7 +32,7 @@ module.exports = {
         const incident = await connection('incidents')
             .where('id', id) //onde o id for igual ao atribuído acima
             .select('ong_id') //seleciona apenas a coluna ong_id
-            .first() //como retorna apenas um registro, é possível usar esse comando
+            .first(); //como retorna apenas um registro, é possível usar esse comando
         
         if (incident.ong_id != ong_id) {
             return response.status(401).json({ error: 'Operation not permitted.' }); //status não autorizado, enviando uma resposta escrita em formato json
