@@ -2,7 +2,7 @@ const express = require('express'); //importa a aplicação express para o arqui
 
 const OngController = require('./controllers/OngController'); //importa dados de ongcontroller dentro da aplicação 
 
-const connection = require('./database/connection');
+//apaga comando de conexão com banco por ela não ser mais utilizada nas rotas 
 
 const routes = express.Router(); //desacopla as rotas do express em uma nova variável
 
