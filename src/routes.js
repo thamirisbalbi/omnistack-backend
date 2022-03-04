@@ -11,7 +11,7 @@ const routes = express.Router(); //desacopla as rotas do express em uma nova var
 routes.get('/ongs', OngController.index);
 routes.post('/ongs', OngController.create); //cria cadastro de ong com método post
 
-routes.get('/profile', ProfileController.index);
+routes.get('/profile', ProfileController.index); //rota de casos específicos na aplicação
 
 routes.get('/incidents', IncidentController.index); //cria rota que lista incidentes
 routes.post('/incidents', IncidentController.create); // rota que cria os incidentes
