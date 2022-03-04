@@ -25,7 +25,7 @@ module.exports = {
     
     },
     
-    async delete(request, respose) {
+    async delete(request, response) {
         const { id } = request.params; //pegar o id no parâmetro de rotas
         const ong_id = request.headers.authorization; // busca o id da ong, para verificar se é a ong que criou o caso quem está querendo deletá-lo
 
