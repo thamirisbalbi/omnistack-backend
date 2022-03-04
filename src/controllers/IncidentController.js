@@ -7,7 +7,7 @@ module.exports = {
 
         const incidents = await connection('incidents')
         .limit(5)
-        
+        .offset((page - 1) * 5)
         .select('*');
         
         return response.json(incidents);
