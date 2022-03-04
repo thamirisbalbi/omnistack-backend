@@ -14,7 +14,7 @@ module.exports = {
             .offset((page - 1) * 5) //esquema simples de paginação
             .select('*');
 
-        response.header('X-Total-Count', count['count(*)']); 
+        response.header('X-Total-Count', count['count(*)']); //retorna ao cabeçalho número total de páginas
         
         return response.json(incidents);
     },
