@@ -17,9 +17,14 @@ module.exports = {
             description,
             value,
             ong_id,
-        });
+        }); //cria incidente
 
         return response.json({ id });
 
-    }   //cria incidente
+    },
+    
+    async delete(request, respose) {
+        
+    }
+
 }; //exporta objeto
