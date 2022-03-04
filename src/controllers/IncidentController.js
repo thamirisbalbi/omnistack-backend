@@ -10,9 +10,11 @@ module.exports = {
         console.log(count);
 
         const incidents = await connection('incidents')
-        .limit(5)
-        .offset((page - 1) * 5) //esquema simples de paginação
-        .select('*');
+            .limit(5)
+            .offset((page - 1) * 5) //esquema simples de paginação
+            .select('*');
+
+        response.header('X-Total-Count', count['count(*)']); 
         
         return response.json(incidents);
     },
