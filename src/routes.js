@@ -13,5 +13,5 @@ routes.post('/ongs', OngController.create); //cria cadastro de ong com método p
 
 routes.get('/incidents', IncidentController.index); //cria rota que lista incidentes
 routes.post('/incidents', IncidentController.create); // rota que cria os incidentes
-
+routes.delete('/incidents/:id', ) //route param com id do incidente que se quer deletar
 module.exports = routes; //deixa as rotas disponíveis para o acesso: exporta a variável routes de dentro do arquivo
