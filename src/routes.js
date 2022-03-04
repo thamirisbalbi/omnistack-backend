@@ -1,5 +1,7 @@
 const express = require('express'); //importa a aplicação express para o arquivo routes
 
+const OngController = require('./controllers/OngController'); //importa dados de ongcontroller dentro da aplicação 
+
 const connection = require('./database/connection');
 
 const routes = express.Router(); //desacopla as rotas do express em uma nova variável
