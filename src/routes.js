@@ -14,9 +14,8 @@ const routes = express.Router(); //desacopla as rotas do express em uma nova var
      
 //}); //rota do tipo get, pois se quer listar algo
 
-routes.post('/ongs', async (request, response) => { //cria cadastro de ong com método post
+routes.post('/ongs', OngController.create); //cria cadastro de ong com método post
  
-
-}); //rota de criação da ong
+//rota de criação da ong
 
 module.exports = routes; //deixa as rotas disponíveis para o acesso: exporta a variável routes de dentro do arquivo
