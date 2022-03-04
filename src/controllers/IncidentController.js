@@ -39,6 +39,7 @@ module.exports = {
 
         await connection('incidents').where('id', id).delete(); //deleta o registro de dentro da tabela do banco de dados
 
+        return response.status(204).send(); //retorna umaresposta ao frontEnd, quando não tem conteúdo
         
     }
 
