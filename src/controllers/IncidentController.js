@@ -5,6 +5,8 @@ module.exports = {
     async index(request, response) {
         const { page = 1 } = request.query; //se page ainda não existir, é criado page com valor inicial igual a 1 
 
+        const [count] = await connection('incidents').count(); //contará todos os casos //count entre colchetes retornará a primeira posição do array
+
         const incidents = await connection('incidents')
         .limit(5)
         .offset((page - 1) * 5) //esquema simples de paginação
