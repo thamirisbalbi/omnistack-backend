@@ -7,6 +7,8 @@ module.exports = {
 
         const [count] = await connection('incidents').count(); //contará todos os casos //count entre colchetes retornará a primeira posição do array
 
+        console.log(count);
+
         const incidents = await connection('incidents')
         .limit(5)
         .offset((page - 1) * 5) //esquema simples de paginação
