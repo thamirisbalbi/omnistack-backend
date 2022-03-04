@@ -10,10 +10,17 @@ module.exports = {
         console.log(count);
 
         const incidents = await connection('incidents')
-            .join('ongs', 'ongs_id', '=', 'incidents.ong_id') //compara o ong_id e trazendo os dados das ongs relacionada ao incidente cadastrado
+            .join('ongs', 'ongs.id', '=', 'incidents.ong_id') //compara o ong_id e traz os dados das ongs relacionada ao incidente cadastrado
             .limit(5)
             .offset((page - 1) * 5) //esquema simples de paginação
-            .select('*');
+            .select([
+                'incidents.*', //todos os dados dos incidentes selecionados
+                'ongs.name',
+                'ongs.email',
+                'ongs.whatsapp',
+                'ongs.city',
+                'ongs.uf'
+            ]);
 
         response.header('X-Total-Count', count['count(*)']); //retorna ao cabeçalho número total de páginas
         
