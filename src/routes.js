@@ -8,7 +8,7 @@ const routes = express.Router(); //desacopla as rotas do express em uma nova var
 
 routes.get('/ongs', OngController.index);
 routes.post('/ongs', OngController.create); //cria cadastro de ong com método post
- 
-//rota de criação da ong
+  
+routes.post('/incidents'); 
 
 module.exports = routes; //deixa as rotas disponíveis para o acesso: exporta a variável routes de dentro do arquivo
