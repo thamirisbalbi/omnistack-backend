@@ -7,6 +7,7 @@ const routes = require('./routes'); //importa as rotas do arquivo routes utiliza
 
 const app = express();
 
+app.use(cors()); //permite o acesso do frontend ao backend
 app.use(express.json()); // vindo antes das rotas, e converte o json em um objeto do JS : transforma o arquivo json do parâmetro em algo entendível pela aplicação
 app.use(routes); //importante esse comando estar abaixo do app use express.json
 
