@@ -1,6 +1,8 @@
 const express = require('express'); //importando funcionalidades do módulo express para dentro da variável express
 // agora a variável express contém todas as funcionalidades disponíveis para o projeto
 
+const cors = require('cors'); // importa cors
+
 const routes = require('./routes'); //importa as rotas do arquivo routes utilizando require: é preciso usar o ./ para o programa saber que é um arquivo, não um pacote como o express
 
 const app = express();
